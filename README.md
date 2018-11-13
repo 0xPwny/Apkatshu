@@ -10,4 +10,9 @@ data from apk files and save them into splitted txt files .
 The user can choose wich decompiler to use  JADX or APKTOOL
 ```
 
+## USAGE :
+
+For JADX Decompiler    : ./Apkatshu.sh JADX file.apk
+For APKTOOL Decompiler : ./Apkatshu.sh APKTOOL file.apk
+
 - Special thanks @chmodxx , @b1337k , @ubernoob for their support
