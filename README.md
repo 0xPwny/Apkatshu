@@ -3,3 +3,11 @@
 
   <img src="img/Apkatshu.png" alt="apkatshu">
 
+```text
+Apkatshu : tool written in bash/python for extracting interesting 
+data from apk files and save them into splitted txt files . 
+
+The user can choose wich decompiler to use  JADX or APKTOOL
+```
+
+- Special thanks @chmodxx , @b1337k , @ubernoob for their support
