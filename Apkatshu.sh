@@ -39,14 +39,14 @@ jadxx(){
   		exit
 	fi
 
-#check for dir existence and decompile
+
 	if [ -d "$dist_dir" ]; then
 		true
 	fi
 		$(mkdir -p $dist_dir)
 	echo "\n[+] Pika Pika is Decompiling the application using jadx ... "
 
-	/root/Desktop/Apkatshu/jadx/build/jadx/bin/jadx $Application -d $dist_dir
+	jadx $Application -d $dist_dir
 }
 
 
