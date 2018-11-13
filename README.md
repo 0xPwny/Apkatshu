@@ -11,9 +11,11 @@ The user can choose wich decompiler to use  JADX or APKTOOL
 ```
 
 ## USAGE :
+- JADX : 
+./Apkatshu.sh JADX file.apk
 
-For JADX Decompiler    : ./Apkatshu.sh JADX file.apk
+- APKTOOL : 
 
-For APKTOOL Decompiler : ./Apkatshu.sh APKTOOL file.apk
+./Apkatshu.sh APKTOOL file.apk
 
 - Special thanks @chmodxx , @b1337k , @ubernoob for their support
