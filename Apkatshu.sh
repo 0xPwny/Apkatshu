@@ -85,6 +85,6 @@ echo "[+] Application Successfully Decompiled ^.^ "
 sleep 2
 echo "[+] Pika Pika extracting importants data from the application ... "
 
-python Extractshu.py $dist_dir
+python Extractshu.py $dist_dir $Tool
 
 echo "\n[+] Pikatshuuuuuuuuuuuu "
