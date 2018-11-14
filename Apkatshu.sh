@@ -46,7 +46,7 @@ jadxx(){
 		$(mkdir -p $dist_dir)
 	echo "\n[+] Pika Pika is Decompiling the application using jadx ... "
 
-	jadx $Application -d $dist_dir
+	jadx $Application -d $dist_dir > /dev/null
 }
 
 
