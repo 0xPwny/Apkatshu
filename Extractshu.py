@@ -35,7 +35,7 @@ class Extractor:
 	def emailEX(self):
 		emails = open(sys.argv[1]+"/EX_EMAILS.txt","a")
 		data = fileReader(self.file)
-		ex_emails= list(set(re.findall(r'[\w\.-]+@[\w\.-]+', data)))
+		ex_emails= list(set(re.findall(r'^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z0-9*]*$', data)))
 
 		for email in ex_emails:
                         if len(email) < 2:
