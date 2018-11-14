@@ -63,15 +63,12 @@ class Extractor:
 			ips.write(ip.strip()+"\n")
 
 	def interes_files(self):
-		words = ['base_url',"ftp_","db_","password","pass","user_pass","user_name","username","smtp_","passwd","mysql://","ftp://"]
+		int_files = open(sys.argv[1]+"/EX_DATA.txt","a")
+		words = ['base_url',"ftp_","db_","pass","user_pass","user_name","smtp_","passwd","mysql://","ftp://"]
 		data = fileReader(self.file)
 		for word in words:
 			if word.upper() in data or word.lower() in data:
-				print "[!] {} has {}".format(self.file,word)
-			elif "UserName" or "Username" in data:
-				print "[!] {} has a username ".format(self.file)
-			elif "PassWord" or "Password" in data:
-				print "[!] {} has a password ".format(self.file)
+				 int_files.write("{} \t: {}\n".format(word,self.file))
 
 
 if __name__ == '__main__':
@@ -80,3 +77,4 @@ if __name__ == '__main__':
 		EX.urlsEX()
 		EX.emailEX()
 		EX.ipsEX()
+		EX.interes_files()
