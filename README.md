@@ -19,4 +19,13 @@ The user can choose wich decompiler to use  JADX or APKTOOL
 
 ./Apkatshu.sh APKTOOL file.apk
 
-- Special thanks @chmodxx , @b1337k , @ubernoob for their support
+**fixed** :
+
+- add more regex to get more mails 
+- .smali for JADX , and .java for APKTOOL
+
+on work :
+- hide JADX stdout / stderr
+
+
+## Special thanks @chmodxx , @b1337k , @ubernoob for their support
