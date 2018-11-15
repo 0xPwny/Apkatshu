@@ -5,7 +5,7 @@
 
 ```text
 Apkatshu : tool written in bash/python for extracting interesting 
-data from apk files and save them into splitted txt files . 
+data from apk files and save them into spplited txt files . 
 
 The user can choose wich decompiler to use  JADX or APKTOOL
 ```
