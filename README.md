@@ -23,7 +23,7 @@ The user can choose wich decompiler to use  JADX or APKTOOL
 
 - add more regex to get more mails 
 - .smali for JADX , and .java for APKTOOL
-- hide JADX stdout / stderr
+- hide JADX stderr
 
 
 ## Special thanks @chmodxx , @b1337k , @ubernoob for their support
