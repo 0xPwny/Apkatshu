@@ -77,7 +77,7 @@ elif [ "$Tool" = "JADX" ];then
 	jadxx
 
 else
-	echo "[!] use one from list"
+	echo "[!] use one from list (JADX/APKTOOL)"
 	echo "\n[*] USAGE : ./Apkatshu.sh  JADX/APKTOOL file.apk \n"
 	exit
 fi
