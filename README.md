@@ -4,7 +4,8 @@
   <img src="img/Apkatshu.png" alt="apkatshu">
 
 ```text
-Apkatshu : tool written in bash/python  for extracting urls, emails, ip addresses, and interesting data from APK files. The user can choose either JADX or APKTOOL for de-compilation.
+Apkatshu : tool written in bash/python  for extracting urls, emails, ip addresses, and interesting data from APK files. 
+The user can choose either JADX or APKTOOL for de-compilation.
 ```
 
 ## USAGE :
