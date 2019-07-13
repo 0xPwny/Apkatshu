@@ -20,7 +20,7 @@ The user can choose either JADX or APKTOOL for de-compilation.
 **fixed** :
 
 - add more regex to get more mails 
-- .smali for JADX , and .java for APKTOOL
+- .smali for APKTOOL , and .java for JADX
 - hide JADX stderr
 
 
