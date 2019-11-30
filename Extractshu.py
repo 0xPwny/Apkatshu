@@ -26,7 +26,7 @@ def Lister(path):
 
 Lister(path)
 
-print "[+] Sources list successfully generated !"
+print ("[+] Sources list successfully generated !")
 
 class Extractor:
 	def __init__(self,file):
