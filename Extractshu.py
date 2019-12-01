@@ -36,7 +36,7 @@ Lister(path)
 
 print("[+] Sources list successfully generated !")
 
-class Exractor:
+class Extractor:
 	def __init__(self,file):
 		self.file = file
 
