@@ -20,15 +20,13 @@ def fileReader(file):
 
 def Lister(path):
 	for fpath, dirs,files in os.walk(path):
-	  	for file in files:
-        		if extension in file:
-            			sourcesList.append(os.path.join(fpath, file))
+		for file in files:
+			if extension in file:
+				sourcesList.append(os.path.join(fpath, file))
 				
 def validate_ip(ip):
 	if ":" in ip:
 		ip = ip.split(":")[0]
-
-
 	m = re.match(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip)
 	return bool(m) and all(map(lambda n: 0 <= int(n) <= 255, m.groups()))
 
