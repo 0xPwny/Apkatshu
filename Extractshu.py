@@ -24,9 +24,15 @@ def Lister(path):
         		if extension in file:
             			sourcesList.append(os.path.join(fpath, file))
 
+def validate_ip(ip):
+	if ":" in ip:
+		ip = ip.split(":")[0]
+	m = re.match(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip)
+	return bool(m) and all(map(lambda n: 0 <= int(n) <= 255, m.groups()))
+
 Lister(path)
 
-print "[+] Sources list successfully generated !"
+print("[+] Sources list successfully generated !")
 
 class Extractor:
 	def __init__(self,file):
@@ -58,9 +64,11 @@ class Extractor:
 		ips = open(sys.argv[1]+"/EX_IPS.txt","a")
 		data = fileReader(self.file)
                 ex_ips = list(set(re.findall(r'[0-9]+(?:\.[0-9]+){3}', data)))
+		 ex_ips += list(set(re.findall(r'[0-9]+(?:\.[0-9]+){3}:[0-9]+', data)))
 
 		for ip in ex_ips:
-			ips.write(ip.strip()+"\n")
+			if validate_ip(ip):
+				ips.write(ip.strip()+"\n")
 
 	def interes_files(self):
 		int_files = open(sys.argv[1]+"/EX_DATA.txt","a")
