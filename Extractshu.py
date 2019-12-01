@@ -35,7 +35,8 @@ class Exractor:
 	def emailEX(self):
 		emails = open(sys.argv[1]+"/EX_EMAILS.txt","a")
 		data = fileReader(self.file)
-		ex_emails= list(set(re.findall(r'[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+', data)))
+		ex_emails= list(set(re.findall(r'[0-9]+(?:\.[0-9]+){3}', data)))
+		ex_emails+= list(set(re.findall(r'[0-9]+(?:\.[0-9]+){3}:[0-9]+', data)))
 
 		for email in ex_emails:
                         if len(email) < 2:
