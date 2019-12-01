@@ -22,6 +22,9 @@ The user can choose either JADX or APKTOOL for de-compilation.
 - add more regex to get more mails 
 - .smali for APKTOOL , and .java for JADX
 - hide JADX stderr
+- Modify Extractshu.py to support python3
+- indentation errors
+- add more regex for ip address extraction
 
 
 ## Special thanks @chmodxx , @b1337k , @ubernoob for their support
