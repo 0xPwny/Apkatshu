@@ -56,8 +56,7 @@ class Exractor:
 	def urlsEX(self):
 		urls = open(sys.argv[1]+"/EX_URLS.txt","a")
 		data = fileReader(self.file)
-                ex_urls = list(set(re.findall(r'(?:https?|ftp):\/\/[\w/\-?=%.]+\.[\w/\-?=%.]+', data)))
-
+		ex_urls = list(set(re.findall(r'(?:https?|ftp):\/\/[\w/\-?=%.]+\.[\w/\-?=%.]+', data)))
 		for url in ex_urls:
 			if len(url) < 2:
 				pass
