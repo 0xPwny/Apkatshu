@@ -23,6 +23,16 @@ def Lister(path):
 	  	for file in files:
         		if extension in file:
             			sourcesList.append(os.path.join(fpath, file))
+				
+def validate_ip(ip):
+	if ":" in ip:
+		ip = ip.split(":")[0]
+
+
+	m = re.match(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip)
+	return bool(m) and all(map(lambda n: 0 <= int(n) <= 255, m.groups()))
+
+
 
 Lister(path)
 
@@ -59,9 +69,11 @@ class Exractor:
 		ips = open(sys.argv[1]+"/EX_IPS.txt","a")
 		data = fileReader(self.file)
                 ex_ips = list(set(re.findall(r'[0-9]+(?:\.[0-9]+){3}', data)))
-
+		ex_ips += list(set(re.findall(r'[0-9]+(?:\.[0-9]+){3}:[0-9]+', data)))
+		
 		for ip in ex_ips:
-			ips.write(ip.strip()+"\n")
+			if validate_ip(ip):
+				ips.write(ip.strip()+"\n")
 
 	def interes_files(self):
 		int_files = open(sys.argv[1]+"/EX_DATA.txt","a")
