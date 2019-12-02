@@ -1,4 +1,5 @@
-# Apkatshu
+# Apkatshu ![img](https://img.shields.io/badge/python-v2-green.svg?style=for-the-badge)
+
 - Apkatshu its a Tool for extracting urls , emails , ip address , and interesting data from APK files
 
   <img src="img/Apkatshu.png" alt="apkatshu">
