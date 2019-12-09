@@ -5,9 +5,9 @@ import re
 path = sys.argv[1]
 tool = sys.argv[2]
 
-if tool == "JADX":
+if tool == "JADX" or tool == "jadx":
 	extension = ".java"
-elif tool == "APKTOOL":
+elif tool == "APKTOOL" or tool == "apktool":
 	extension = ".smali"
 else:
 	sys.exit()
@@ -73,12 +73,12 @@ class Extractor:
 
 	def interes_files(self):
 		int_files = open(sys.argv[1]+"/EX_DATA.txt","a")
-		words = open("config/custom.lst","r").split("\n")
+		words = open("config/custom.lst","r").read()
 		data = fileReader(self.file)
-		for word in words:
-			if word.upper() in data or word.lower() in data or word in data:
-				 int_files.write("{} \t: {}\n".format(word,self.file))
-		words.close()
+		for word in words.split("\n"):
+			if len(word) >= 2:
+				if word.upper() in data or word.lower() in data or word in data:
+					int_files.write("{} \t: {}\n".format(word,self.file))
 
 if __name__ == '__main__':
 	for sl in sourcesList:
