@@ -73,12 +73,12 @@ class Extractor:
 
 	def interes_files(self):
 		int_files = open(sys.argv[1]+"/EX_DATA.txt","a")
-		words = ['base_url',"ftp_","db_","pass","user_pass","user_name","smtp_","passwd","mysql://","ftp://"]
+		words = open("config/custom.lst","r").split("\n")
 		data = fileReader(self.file)
 		for word in words:
-			if word.upper() in data or word.lower() in data:
+			if word.upper() in data or word.lower() in data or word in data:
 				 int_files.write("{} \t: {}\n".format(word,self.file))
-
+		words.close()
 
 if __name__ == '__main__':
 	for sl in sourcesList:
