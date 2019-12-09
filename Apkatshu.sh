@@ -70,10 +70,10 @@ if [ -z "$Tool" ];then
 	echo "\n[*] USAGE : ./Apkatshu.sh  JADX/APKTOOL file.apk \n"
 	exit
 
-elif [ "$Tool" = "APKTOOL" ];then
+elif [ "$Tool" = "APKTOOL" ] || [ "$Tool" = "apktool" ];then
 	apkk
 
-elif [ "$Tool" = "JADX" ];then
+elif [ "$Tool" = "JADX" ] || [ "$Tool" = "jadx" ];then
 	jadxx
 
 else
