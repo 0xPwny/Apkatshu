@@ -11,20 +11,22 @@ The user can choose either JADX or APKTOOL for de-compilation.
 ## USAGE :
 - JADX : 
 
-./Apkatshu.sh JADX file.apk
+./Apkatshu.sh (JADX/jadx) file.apk
 
 - APKTOOL : 
 
-./Apkatshu.sh APKTOOL file.apk
+./Apkatshu.sh (APKTOOL/apktool) file.apk
 
+- Searching For other keywords :
+  add specific keywords you want to look for them into config/custom.lst
 **fixed** :
 
-- add more regex to get more mails 
+- more regex to get more mails 
 - .smali for APKTOOL , and .java for JADX
 - hide JADX stderr
-- Modify Extractshu.py to support python3
+- Modifications to support python3
 - indentation errors
-- add more regex for ip address extraction and validation
+- more regex for ip address extraction and validation
 
 
 ## Special thanks @chmodxx , @b1337k , @ubernoob for their support
