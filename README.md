@@ -19,6 +19,8 @@ The user can choose either JADX or APKTOOL for de-compilation.
 
 - Searching For other keywords :
   add specific keywords you want to look for them into config/custom.lst
+  
+  
 **fixed** :
 
 - more regex to get more mails 
