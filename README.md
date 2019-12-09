@@ -17,8 +17,9 @@ The user can choose either JADX or APKTOOL for de-compilation.
 
 ./Apkatshu.sh (APKTOOL/apktool) file.apk
 
-- Searching For other keywords :
-  add specific keywords you want to look for them into config/custom.lst
+Searching For other keywords :
+
+  - add the keywords you want to look for them into config/custom.lst
   
   
 **fixed** :
