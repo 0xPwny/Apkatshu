@@ -30,6 +30,3 @@ Searching For other keywords :
 - Modifications to support python3
 - indentation errors
 - more regex for ip address extraction and validation
-
-
-## Special thanks @chmodxx , @b1337k , @ubernoob for their support
