@@ -52,7 +52,7 @@ class Extractor:
 
     def interes_files(self):
         int_files = open("EX_DATA.txt","a")
-        words = open("custom.lst","r").read()
+        words = open("config/custom.lst","r").read()
         data = self.fileReader(self.file)
 
         for word in words.split("\n"):
