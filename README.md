@@ -11,11 +11,17 @@ The user can choose either JADX or APKTOOL for de-compilation.
 ## USAGE :
 - JADX : 
 
+```
 ./Apkatshu.sh (JADX/jadx) file.apk
+```
+
 
 - APKTOOL : 
 
+```
 ./Apkatshu.sh (APKTOOL/apktool) file.apk
+```
+
 
 Searching For other keywords :
 
@@ -30,3 +36,5 @@ Searching For other keywords :
 - Modifications to support python3
 - indentation errors
 - more regex for ip address extraction and validation
+- Fixed python issues 
+- extracted data to specific files 
