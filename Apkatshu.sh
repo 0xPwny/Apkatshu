@@ -37,7 +37,7 @@ file_base=`basename $Application .apk`
 dist_dir="Outpkatshu/"$file_base"_katshu_$todate"
 
 
-usage() { echo -e "Usage: ./lazyrecon.sh apktool/jadx file.apk " 1>&2; exit 1; }
+usage() { echo -e "Usage: ./Apkatshu.sh apktool/jadx file.apk " 1>&2; exit 1; }
 
 while getopts ":h" option; do
    case $option in
