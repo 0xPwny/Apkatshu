@@ -80,8 +80,8 @@ def main():
 
     for sl in sourcesList:
         extractor = Extractor(sl)
-        extractor.runRegEX('EMAIL',r'[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+')
-        extractor.runRegEX('URL',r'(?:https?|ftp):\/\/[\w/\-?=%.]+\.[\w/\-?=%.]+')
+        extractor.runRegEX('EMAIL',r'[a-zA-Z0-9\.\-+_!#]+@[a-zA-Z0-9\.\-+_!#]+\.[a-zA-Z]+(?:\([^\x00-\x08\x0E-\x1F\x7F-\xFF]*\))*')
+        extractor.runRegEX('URL',r'(?:http|https|ftp|mailto|tel):\/\/[\w/\-?=%.]+\.[\w/\-?=%.]+(?:\?[\w/\-?=%.]*)?(?:#[\w/\-?=%.]*)?')
         extractor.interes_files()
 
     with open(path_save,"a") as fileData:
